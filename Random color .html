@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/random-color.css">
+    <title>สุ่มสี/RandomColor</title>
+  <link rel="stylesheet"
+   href="color.css">
+</head>
+<body>
+  <a href="index.html"><ย้อนกลีบ</a>
+    <div class="container">
+        <div class="card">
+            <div class="color"></div>
+            <center>
+                <p id="color-name">Color: Gray</p> <!-- ที่แสดงชื่อสี -->
+                <button class="button">Random</button>
+            </center>
+        </div>
+    </div>
+
+    <!-- โค้ด JavaScript อยู่ภายในไฟล์ HTML -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = [
+              { hex: "#f3a683", name: "Light Salmon" },
+              { hex: "#f7d794", name: "Pastel Yellow" },
+              { hex: "#778beb", name: "Soft Blue" },
+              { hex: "#e77f67", name: "Coral Pink" },
+              { hex: "#cf6a87", name: "Dusty Rose" },
+              { hex: "#fff", name: "White" },
+            ];
+
+            const card = document.querySelector('.color');
+            const btn = document.querySelector('.button');
+            const colorName = document.getElementById('color-name');
+
+            // ตรวจสอบว่า btn ไม่ใช่ null ก่อนเรียก addEventListener
+            if (btn) {
+                btn.addEventListener('click', function() {
+                  const randomColorObj = colors[Math.floor(Math.random() * colors.length)];
+                  card.style.backgroundColor = randomColorObj.hex;
+                  colorName.textContent = `Color: ${randomColorObj.name}`;
+                });
+            } else {
+                console.error("Button not found!");
+            }
+        });
+    </script>
+</body>
+</html>
