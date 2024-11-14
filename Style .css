@@ -1,0 +1,39 @@
+/* เปลี่ยนสีพื้นหลัง */
+body {
+    background-color: blueviolet;
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    flex-direction:column;
+}
+
+/* จัดการสไตล์หัวข้อ */
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+/* จัดการสไตล์ลิงก์ */
+a {
+    color: darkred;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.server-time {
+    margin-left:197px;
+}
+
+.button {
+    desplay:inline-block;
+    padding:10px 20px;
+    background-color:red;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:16px;
+}
